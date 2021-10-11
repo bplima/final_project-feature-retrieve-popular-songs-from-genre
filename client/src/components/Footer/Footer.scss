@@ -1,0 +1,19 @@
+.footer {
+  position: relative;
+  background: $accent-primary;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+
+  .footer__framework {
+    @include mix-framework-extended;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: $gap-md;
+    padding-bottom: $gap-md;
+
+    svg {
+      height: 32px;
+    }
+  }
+}

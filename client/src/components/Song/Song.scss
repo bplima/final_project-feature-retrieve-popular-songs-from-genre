@@ -1,0 +1,110 @@
+.song {
+  width: 100%;
+  height: 64px;
+  padding: 0 $gap-md;
+  border-radius: $border-radius;
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  $button-width: 32px;
+
+  &:hover {
+    background: $background-tertiary;
+
+    .song__button {
+      display: flex;
+    }
+
+    .song__left .song__index span {
+      display: none;
+    }
+  }
+
+  .song__left {
+    width: 480px;
+    display: flex;
+    align-items: center;
+
+    .song__index {
+      text-align: center;
+      width: $button-width;
+      font-size: $font-size-lg;
+      font-family: $font-family-secondary;
+      margin-right: $gap-md;
+
+      span {
+        margin-bottom: $gap-xs;
+      }
+    }
+
+    .song__image {
+      height: 40px;
+      width: 40px;
+      background: white;
+      margin-right: $gap-md;
+    }
+
+    .song__details {
+      display: flex;
+      flex-direction: column;
+
+      .song__title {
+        width: 360px;
+        text-overflow: ellipsis;
+        overflow-x: clip;
+        white-space: nowrap;
+        font-size: $font-size-lg;
+        font-weight: 600;
+        margin-bottom: $gap-xs;
+      }
+
+      .song__author {
+        font-size: $font-size-sm;
+        color: $color-secondary;
+      }
+    }
+  }
+
+  .song__middle {
+    width: 80px;
+    text-align: center;
+  }
+
+  .song__right {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .song__popularity {
+      text-align: end;
+      color: $accent-primary;
+      fill: $accent-primary;
+
+      > div {
+        font-size: $font-size-lg;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        svg {
+          width: 21px;
+          margin-right: $gap-xs;
+          margin-bottom: 2px;
+        }
+      }
+    }
+  }
+
+  .song__button {
+    width: $button-width;
+    height: $button-width;
+    display: none;
+
+    svg {
+      width: 16px;
+    }
+  }
+}

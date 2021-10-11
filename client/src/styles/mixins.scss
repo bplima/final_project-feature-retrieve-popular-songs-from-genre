@@ -1,0 +1,48 @@
+// shadows
+@mixin mix-shadow-down() {
+  box-shadow: 0 $shadow-offset $shadow-blur rgba(0, 0, 0, $shadow-intensity);
+}
+
+// frameworks
+@mixin mix-framework {
+  @include mix-framework-dynamic($framework-width);
+}
+
+@mixin mix-framework-extended {
+  @include mix-framework-dynamic($framework-width-extended);
+}
+
+@mixin mix-framework-dynamic($width) {
+  width: $width + $framework-padding * 2;
+  padding-left: $framework-padding;
+  padding-right: $framework-padding;
+}
+
+// texts
+@mixin mix-text-title {
+  font-family: $font-family-secondary;
+  font-size: $font-size-xxl;
+  margin-bottom: $gap-sm;
+}
+
+@mixin mix-text-subtitle {
+  font-size: $font-size-md;
+  color: $color-secondary;
+}
+
+// buttons
+@mixin mix-button-primary {
+  @include mix-shadow-down;
+  background: $accent-primary;
+  border-radius: $border-radius;
+  color: $color-primary;
+  padding: $gap-sm * 1.5 $gap-md * 1.5;
+
+  &:active, &:hover, &:focus {
+    background: $accent-secondary;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 1px $color-primary;
+  }
+}

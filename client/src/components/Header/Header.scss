@@ -1,0 +1,42 @@
+.header {
+  @include mix-shadow-down;
+  position: relative;
+  background: $background-primary;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+
+  .header__framework {
+    @include mix-framework-extended;
+    display: flex;
+    justify-content: space-between;
+
+    .header__logo {
+      font-family: $font-family-secondary;
+      padding: $gap-sm 0 $gap-md;
+      font-size: 32px;
+      line-height: 125%;
+      color: $color-primary;
+      text-decoration: none;
+    }
+
+    .header__user {
+      font-size: $font-size-sm;
+      line-height: 100%;
+      font-weight: 500;
+      padding: 0 $gap-lg;
+      background: $accent-primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      div {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: $gap-sm;
+        background: white;
+      }
+    }
+  }
+}

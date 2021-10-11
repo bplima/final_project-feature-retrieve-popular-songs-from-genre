@@ -1,0 +1,26 @@
+// shadows
+$shadow-intensity: 0.15;
+$shadow-offset: 8px;
+$shadow-blur: 12px;
+
+// gaps
+$gap-xs: 4px;
+$gap-sm: 8px;
+$gap-md: 16px;
+$gap-lg: 32px;
+$gap-xl: 64px;
+
+// frameworks
+$framework-width: 1000px;
+$framework-width-extended: 1200px;
+$framework-padding: $gap-xl;
+
+// pages
+$page-padding: $gap-xl;
+
+// components
+$border-radius: 12px;
+
+// transitions
+$transition-duration: 150ms;
+$transition-timing-function: ease;

@@ -1,0 +1,13 @@
+@import './styles/themes';
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/fonts';
+@import './styles/global';
+
+@import './App';
+@import './pages/HomePage/HomePage';
+@import './pages/PlaylistPage/PlaylistPage';
+@import './components/Header/Header';
+@import './components/Footer/Footer';
+@import './components/GenreCard/GenreCard';
+@import './components/Song/Song';

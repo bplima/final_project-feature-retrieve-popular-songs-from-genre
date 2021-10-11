@@ -1,0 +1,34 @@
+.home-page {
+  position: relative;
+  overflow-x: visible;
+  overflow-y: clip;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  > svg {
+    position: absolute;
+    top: $gap-md;
+    width: 150%;
+    fill: $background-tertiary;
+    opacity: 0.3;
+    filter: drop-shadow($gap-lg $gap-lg $gap-sm rgba(0, 0, 0, 0.15));
+    z-index: -1;
+  }
+
+  .home-page__title {
+    @include mix-text-title;
+  }
+
+  .home-page__subtitle {
+    @include mix-text-subtitle;
+    margin-bottom: $gap-xl;
+  }
+
+  .home-page__genres {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap-md;
+  }
+}
